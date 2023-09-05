@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './components/home'
-import Produto from './components/produtos'
-import Error from './components/error'
-import EditarProduto from './components/editarProdutos'
+import { Outlet } from 'react-router-dom'
+import "./App.css"
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
+      
+       
+      <Outlet/>
+      
      
     </>
   )
