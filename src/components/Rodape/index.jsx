@@ -5,3 +5,5 @@ const Rodape = () => {
         </footer>
     )
 }
+
+export default Rodape
