@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './components/home'
+import Produto from './components/produtos'
+import Error from './components/error'
+import EditarProduto from './components/editarProdutos'
 
 
 const router = createBrowserRouter([
