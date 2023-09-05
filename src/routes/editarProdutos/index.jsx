@@ -9,3 +9,5 @@ const EditarProdutos = () => {
         </main>
     )
 }
+
+export default EditarProdutos

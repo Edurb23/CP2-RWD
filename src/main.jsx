@@ -2,41 +2,40 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './components/home'
-import Produto from './components/produtos'
-import Error from './components/error'
-import EditarProduto from './components/editarProdutos'
-
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom'
+import Home from './routes/home'
+import Produtos from './routes/produtos'
+import Erro from './routes/error'
+import EditarProdutos from './routes/editarProdutos'
 
 const router = createBrowserRouter([
-  {
+  
+   {
     path: "/",
     element: <App/>,
-    errorElement: <Error/>,
-    children:[
+    errorElement: <Erro/>,
+    children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home/>,
       },
       {
-        path: "/produtos",
-        element:<Produto/>
+         path: "/produtos",
+          element: <Produtos/>
       },
       {
-        path: "/editar/produtos/:id",
-        element: <EditarProduto/>
-      },
-      
+        path: "/produtos/editar/:id",
+        element: <EditarProdutos/>
+      }
+       
     ]
-    
-  }
-])
+   }
 
+])
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
